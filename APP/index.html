@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- ICO -->
+    <link rel="icon" type="image/jpg" href="https://cdn.pixabay.com/photo/2018/05/21/12/42/icon-3418161_1280.png" />
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/home.css">
+    <title>MiDestino</title>
+</head>
+
+<body class="d-flex flex-column">
+    <header class="p-1">
+        <div class="container">
+            <h1>MiDestino</h1>
+        </div>
+    </header>
+
+    <main class="flex-grow-1">
+        <div class="container bg-light">
+            <div class="container pt-4 pb-3">
+                <h2 class="">Escoge tu vuelo al mejor precio.</h2>
+            </div>
+            <form name="filtros" novalidate>
+                <div class="container">
+                    <div class="d-flex d-flex justify-content-around pb-3 position-relative contenedor-inputs">
+                        <label for="partida" class="bg-light d-flex flex-column shadow rounded-2 card-input">
+                            <span class="bg-transparent">Desde</span>
+                            <input class="border-0 bg-transparent" name="partida" id="partida" type="text"
+                                placeholder="Ciudad o aeropuerto">
+                        </label>
+
+                        <label for="destino" class="bg-light d-flex flex-column shadow rounded-2 card-input">
+                            <span class="bg-transparent">A</span>
+                            <input class="border-0 bg-transparent" name="destino" id="destino" type="text"
+                                placeholder="Ciudad o aeropuerto">
+                        </label>
+
+                        <label for="fecha-ida" class="bg-light d-flex flex-column shadow rounded-2 card-input">
+                            <span class="bg-transparent">Ida</span>
+                            <input class="border-0 bg-transparent" name="fecha_ida" id="fecha-ida" type="date">
+                        </label>
+
+                        <label for="fecha-vuelta" class="bg-light d-flex flex-column shadow rounded-2 card-input">
+                            <span class="bg-transparent">Vuelta</span>
+                            <input class="border-0 bg-transparent" name="fecha_vuelta" id="fecha-vuelta" type="date"
+                                placeholder="a">
+                        </label>
+
+                        <button type="button" class="btn-intercambio position-absolute" id="btn-intercambio">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
+                                    style="width: 1rem; height: 1rem;">
+                                    <path
+                                        d="M.44 8.56a1.5 1.5 0 010-2.12l4.5-4.5a1.5 1.5 0 012.12 0l4.5 4.5a1.5 1.5 0 01-2.12 2.12L7.5 6.622V19.5a1.5 1.5 0 01-3 0V6.621l-1.94 1.94a1.5 1.5 0 01-2.12 0zm12 6.88a1.5 1.5 0 000 2.12l4.5 4.5a1.5 1.5 0 002.12 0l4.5-4.5a1.5 1.5 0 00-2.12-2.12l-1.94 1.939V4.5a1.5 1.5 0 00-3 0v12.879l-1.94-1.94a1.5 1.5 0 00-2.12 0z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="container d-flex justify-content-end pb-3 border-bottom">
+                    <button type="submit" class="btn-busqueda" id="buscar-vuelo">Buscar vuelos</button>
+                </div>
+            </form>
+
+            <div class="container">
+                <div id="carouselExampleSlidesOnly" class="carousel slide mt-4 mb-2" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://imagenes.elpais.com/resizer/CwZ69LIiOTvDCC3TkAJx7vmarn8=/1200x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/UWDBRH2A7NHR7LEME6D4MTTDKA.jpg"
+                                class="d-block w-100" alt="imagen de viaje 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://kaikucaffelatte.com/blog/wp-content/uploads/2020/03/daniil-vnoutchkov-IiYj9DM7RW0-unsplash-scaled-e1649665002669.jpg"
+                                class="d-block w-100" alt="imagen de viaje 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://s7g10.scene7.com/is/image/barcelo/viajar-solo-sentimientos?&&fmt=webp-alpha&qlt=75&wid=1200&fit=crop,1"
+                                class="d-block w-100" alt="imagen de viaje 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://www.publico.es/psicologia-y-mente/wp-content/uploads/2023/08/viajar-con-amigos-1.jpg"
+                                class="d-block w-100" alt="imagen de viaje 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src="js/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

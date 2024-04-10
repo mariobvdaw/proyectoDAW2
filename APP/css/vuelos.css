@@ -1,0 +1,170 @@
+* {
+    outline: none;
+}
+
+body {
+    min-height: 100vh;
+}
+
+header {
+    background: #8da2ff;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #e9efff;
+    padding: 8px 0;
+}
+
+main {
+    display: flex;
+    background: #eef2fb;
+    flex-grow: 1;
+}
+
+.encabezado {
+    background: #2111c2;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.aside {
+    width: 20%;
+    padding: 15px;
+}
+
+.aside-completo {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+}
+
+.btn-cerrar-aside{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    background: #eef2fb;
+    border: 1px solid black;
+    box-shadow: 0 0 5px white, 0 0 2px black;
+    border-radius: 6px;
+    z-index: 3;
+    transition: background .2s, transform .3s;
+}
+
+.btn-cerrar-aside:hover{
+    background: #dde3f2;
+    transform: scale(1.1);
+}
+
+.accordion-item {
+    border: none;
+}
+
+.accordion-button {
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: inherit !important;
+    border: none;
+}
+
+.span-slider {
+    display: block;
+    text-align: center;
+    height: 20px;
+    width: 100%;
+}
+
+.btn-busqueda {
+    margin: 20px 10%;
+    width: 80%;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+    background-color: #4d59ff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background .2s, transform .3s;
+}
+
+.btn-busqueda:hover {
+    background-color: #2f2efd;
+    transform: translate(2px, -2px);
+}
+
+.btn-busqueda:active {
+    transform: translate(2px, -6px);
+}
+.contenedor-boton-filtros{
+    bottom: 10px ;
+}
+.btn-filtros {
+    margin: 20px 0;
+    width: 100px;
+    min-width: 100px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    color: #f3f4ff;
+    background-color: #635cf6;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.btn-filtros:hover {
+    background: #3f28d9;
+}
+
+.contenedor-vuelos {
+    width: 70%;
+    height: 100%;
+}
+
+.imagen-placeholder {
+    margin: 20px;
+    width: 90%;
+    height: 200px;
+    aspect-ratio: 16/9;
+}
+
+@media (max-width: 1200px) {
+    .aside {
+        display: none;
+    }
+
+    .contenedor-vuelos {
+        width: 100%;
+    }
+
+    #viaje {
+        margin-left: 0px !important;
+    }
+
+    #vuelta {
+        margin-right: 0px !important;
+    }
+
+    .contenedor-boton-filtros {
+        display: flex !important;
+    }
+}

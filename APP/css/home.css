@@ -1,0 +1,143 @@
+* {
+    outline: none;
+}
+body{
+    min-height: 100vh;
+}
+header {
+    background: #2219a1;
+    /* border-bottom: 2px solid black; */
+
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #e9efff;
+    padding: 8px 0;
+    border-bottom: 1px solid #e9efff;
+}
+
+main {
+    display: flex;
+    background: #eef2fb;
+    flex-grow: 1;
+}
+
+main h2 {
+    color: #191452;
+}
+
+/* INPUTS */
+.contenedor-inputs {
+    flex-grow: 1;
+    width: 100%;
+    /* background: #ebf2ff; */
+}
+
+.card-input {
+    scale: 1.2;
+    padding: 4px 20px;
+    width: 20%;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.card-input span {
+    font-size: .9rem;
+    color: #454545;
+    font-weight: 500;
+}
+
+.card-input input {
+    font-size: .8rem;
+}
+
+.card-input:focus-within {
+    outline: 2px solid #ffffff;
+    border: 2px solid #0e7dde;
+}
+
+/* BOTONES */
+.btn-intercambio {
+    align-self: center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: 2;
+    border: 2px solid #191452;
+    background: #ffffff;
+    left: 23.3%;
+    transition: transform .3s;
+}
+
+.btn-intercambio svg {
+    transform: rotate(90deg);
+}
+
+.btn-intercambio:hover {
+    transform: scale(1.1);
+}
+
+.btn-intercambio span {
+    display: flex;
+    justify-content: center;
+}
+
+
+.btn-busqueda {
+    margin: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    color: #fff;
+    background-color: #4d59ff;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background .2s, transform .3s;
+}
+
+.btn-busqueda:hover {
+    background-color: #2f2efd;
+    transform: translate(2px, -2px);
+}
+
+.btn-busqueda:active {
+    transform: translate(2px, -6px);
+}
+
+/* CARROUSEL */
+.carousel-item {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+    .contenedor-inputs {
+        flex-direction: column;
+    }
+
+    .card-input {
+        margin: 10px 10%;
+        width: 80%;
+    }
+
+    .btn-intercambio {
+        top: 18%;
+        left: 75%;
+    }
+
+    .btn-intercambio svg {
+        transform: none;
+    }
+
+    .btn-busqueda {
+        margin: 0 10%;
+        width: 80%;
+    }
+
+}
