@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- ICO -->
+    <link rel="icon" type="image/jpg" href="https://cdn.pixabay.com/photo/2018/05/21/12/42/icon-3418161_1280.png" />
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/formularios.css">
+    <title>MiDestino</title>
+</head>
+
+<body class="d-flex flex-column">
+    <header class="p-1">
+        <div class="container d-flex justify-content-between align-items-end border-bottom mb-2">
+            <h1 id="titulo">MiDestino</h1>
+
+        </div>
+    </header>
+
+
+    <main class="flex-grow-1">
+        <div class="container d-flex gap-4">
+
+            <div class="d-flex flex-column m-4 columna ">
+
+                <div class="datos-contacto rounded shadow bg-light ps-3 pb-3 pt-2">
+                    <h2 class="ps-4 pt-2 mb-0">Formulario de registro</h2>
+                    <form class="formulario-contacto gap-2 d-flex flex-wrap p-3" id="formularioRegistro" method="post" enctype="multipart/form-data">
+
+                        <label for="nombre" class="div bg-light d-flex flex-column rounded-2 card-input">
+                            <span class="bg-transparent">Nombre</span>
+                            <input class="border-0 bg-transparent enviable" name="nombre" id="nombre" type="text">
+                        </label>
+
+                        <label for="apellidos" class="div bg-light d-flex flex-column rounded-2 card-input">
+                            <span class="bg-transparent">Apellidos</span>
+                            <input class="border-0 bg-transparent enviable" name="apellidos" id="apellidos" type="text">
+                        </label>
+
+                        <label for="contraseña" class="div bg-light d-flex flex-column rounded-2 card-input">
+                            <span class="bg-transparent">Contraseña</span>
+                            <input class="border-0 bg-transparent enviable" name="contrasena" id="contrasena" type="text">
+                        </label>
+
+                        <label for="rep-contraseña" class="div bg-light d-flex flex-column rounded-2 card-input">
+                            <span class="bg-transparent">Rep. Contraseña</span>
+                            <input class="border-0 bg-transparent enviable" name="rep-contraseña" id="rep-contraseña"
+                                type="text">
+                        </label>
+
+                        <label for="prefijo-movil" class="div bg-light d-flex flex-column rounded-2 card-input">
+                            <span class="bg-transparent">Prefijo movil</span>
+                            <input class="border-0 bg-transparent enviable" name="prefijo_movil" id="prefijo-movil" type="number"
+                                maxlength="3">
+                        </label>
+                        <label for="telefono" class="div bg-light d-flex flex-column rounded-2 card-input">
+                            <span class="bg-transparent">Teléfono</span>
+                            <input class="border-0 bg-transparent enviable" name="telefono" id="telefono" type="number"
+                                maxlength="9">
+                        </label>
+                        <label for="email" class="div bg-light d-flex flex-column rounded-2 card-input">
+                            <span class="bg-transparent">Email</span>
+                            <input class="border-0 bg-transparent enviable" name="email" id="email" type="text">
+                        </label>
+                        <label for="email-rep" class="div bg-light d-flex flex-column rounded-2 card-input">
+                            <span class="bg-transparent">Repetir email</span>
+                            <input class="border-0 bg-transparent" name="email-rep" id="email-rep" type="text">
+                        </label>
+                        <label for="direccion" class="div bg-light d-flex flex-column rounded-2 card-input">
+                            <span class="bg-transparent">Dirección</span>
+                            <input class="border-0 bg-transparent enviable" name="direccion" id="direccion" type="text">
+                        </label>
+
+                        <label for="cod-postal" class="div bg-light d-flex flex-column rounded-2 card-input">
+                            <span class="bg-transparent">Codigo postal</span>
+                            <input class="border-0 bg-transparent enviable" name="cod_postal" id="cod-postal" type="number">
+                        </label>
+                        <label for="pais" class="div bg-light d-flex flex-column rounded-2 card-input">
+                            <span class="bg-transparent">País</span>
+                            <input class="border-0 bg-transparent enviable" name="pais" id="pais" type="text">
+                        </label>
+
+                        <label for="localidad" class="div bg-light d-flex flex-column rounded-2 card-input">
+                            <span class="bg-transparent">Localidad</span>
+                            <input class="border-0 bg-transparent enviable" name="localidad" id="localidad" type="text">
+                        </label>
+
+
+                        <button type="submit" class="btn-busqueda mt-4" id="crear-usuario">Registrarse</button>
+                    </form>
+                    <a href="./login.html" class="d-block mt-2 mb-4 ms-3">¿Ya tienes una cuenta? Inicia sesión</a>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+    </main>
+
+    <script type="module" src="../js/registro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

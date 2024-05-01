@@ -1,8 +1,20 @@
+import { comprobarSesion } from './sesion.js';
+
+comprobarSesion();
+
 const cardsInputs = document.querySelectorAll('.card-input');
 const btnIntercambio = document.getElementById('btn-intercambio');
-const btnBuscar = document.getElementById('buscar-vuelo');
+// const btnBuscar = document.getElementById('buscar-vuelo');
 const formulario = document.forms.filtros;
 const hoy = new Date().toISOString().split('T')[0];
+
+// enlace al incio de la app
+const titulo = document.getElementById('titulo')
+titulo.style.cursor="pointer";
+titulo.addEventListener('click', () => {
+    window.location.href = './index.html';
+});
+
 
 // filtrar fecha actual
 function mayorHoy(input) {
@@ -39,7 +51,7 @@ formulario.addEventListener('submit', (event) => {
         return;
     }
 
-    window.location=`./html/vuelos.html?partida=${formulario.partida.value}&destino=${formulario.destino.value}&ida=${formulario.fecha_ida.value}&vuelta=${formulario.fecha_vuelta.value}`;
+    window.location = `./html/vuelos.html?partida=${formulario.partida.value}&destino=${formulario.destino.value}&ida=${formulario.fecha_ida.value}&vuelta=${formulario.fecha_vuelta.value}`;
 
 
 });

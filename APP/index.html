@@ -22,8 +22,22 @@
 
 <body class="d-flex flex-column">
     <header class="p-1">
-        <div class="container">
-            <h1>MiDestino</h1>
+        <div class="container d-flex justify-content-between align-items-center border-bottom mb-2">
+            <h1 id="titulo">MiDestino</h1>
+
+            <div class="d-flex align-items-end gap-3 d-none" id="bloqueSesion">
+
+                <p class="text-light m-0" id="bienvenida">
+                    
+                </p>
+                <button id="btn-cerrarSesion" class="btn btn-outline-light">Cerrar Sesión</button>
+            </div>
+
+            <p class="m-0" id="enlaceInicio">
+                <a class="text-light text-decoration-none" href="./html/login.html">Iniciar Sesión</a>
+            </p>
+         
+
         </div>
     </header>
 
@@ -34,7 +48,7 @@
             </div>
             <form name="filtros" novalidate>
                 <div class="container">
-                    <div class="d-flex d-flex justify-content-around pb-3 position-relative contenedor-inputs">
+                    <div class="d-flex justify-content-around pb-3 position-relative contenedor-inputs">
                         <label for="partida" class="bg-light d-flex flex-column shadow rounded-2 card-input">
                             <span class="bg-transparent">Desde</span>
                             <input class="border-0 bg-transparent" name="partida" id="partida" type="text"
@@ -102,7 +116,7 @@
 
     </main>
 
-    <script src="js/home.js"></script>
+    <script type="module" src="js/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

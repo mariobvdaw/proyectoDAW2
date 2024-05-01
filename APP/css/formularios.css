@@ -1,0 +1,104 @@
+* {
+    outline: none;
+}
+
+body {
+    min-height: 100vh;
+}
+
+header {
+    background: #2219a1;
+    /* border-bottom: 2px solid black; */
+
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #e9efff;
+    padding: 8px 0;
+}
+
+main {
+    display: flex;
+    background: #eef2fb;
+    flex-grow: 1;
+}
+
+
+.card-input {
+    padding: 4px 20px;
+    width: 48%;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-input span {
+    /* font-size: .9rem; */
+    color: #656565;
+    font-weight: 500;
+}
+
+.card-input input {
+    /* font-size: .8rem; */
+    font-weight: 600;
+}
+
+.card-input:focus-within {
+    color: blue;
+    border: 1px solid #0e7dde;
+}
+
+.card-input:focus-within span {
+    color: #0e7dde;
+}
+
+.btn-busqueda {
+    margin: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    color: #fff;
+    background-color: #4d59ff;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background .2s, transform .3s;
+}
+
+.btn-busqueda:hover {
+    background-color: #2f2efd;
+    transform: translate(2px, -2px);
+}
+
+.btn-busqueda:active {
+    transform: translate(2px, -6px);
+}
+
+.login {
+	min-width: 750px;
+	max-width: 900px;
+    max-height: 400px;
+}
+
+
+@media (max-width: 767px) {
+
+    .card-input {
+        width: 100%;
+    }
+
+    .datos-contacto {
+        padding-left: 0 !important;
+    }
+
+    .columna {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+}
