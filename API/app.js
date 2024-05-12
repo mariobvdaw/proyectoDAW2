@@ -6,6 +6,8 @@ const session = require('express-session');
 
 const rutasVuelos = require('./routes/rutasVuelos');
 const rutasUsuarios = require('./routes/rutasUsuarios');
+const rutasAeropuertos = require('./routes/rutasAeropuertos');
+const rutasAerolineas = require('./routes/rutasAerolineas');
 
 app.use(cors({
     origin: true,
@@ -23,6 +25,8 @@ app.use(session({
 
 app.use('/vuelos', rutasVuelos);
 app.use('/usuarios', rutasUsuarios);
+app.use('/aeropuertos', rutasAeropuertos);
+app.use('/aerolineas', rutasAerolineas);
 
 
 
