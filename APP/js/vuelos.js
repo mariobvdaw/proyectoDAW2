@@ -2,6 +2,10 @@ import { comprobarSesion } from './sesion.js';
 
 comprobarSesion();
 
+
+const dirIP_api = '127.0.0.1';
+const PUERTO_EXPRESS = 3100;
+
 const sliderDuracion = document.getElementById('duracion');
 const sliderPrecio = document.getElementById('precio');
 const spansSlider = document.querySelectorAll('.span-slider');
@@ -25,6 +29,37 @@ document.getElementById('viaje').innerText = `${partida} - ${destino}`;
 document.getElementById('ida').innerText = new Date(ida).toLocaleDateString();
 document.getElementById('vuelta').innerText = new Date(vuelta).toLocaleDateString();
 
+async function obtenerVuelos() {
+    try {
+        let url = `http://${dirIP_api}:${PUERTO_EXPRESS}/vuelos/buscar`;
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'include',
+            body: JSON.stringify({
+                ciudad_origen: partida,
+                ciudad_destino: destino,
+                fecha_ida: ida,
+                fecha_vuelta: vuelta
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error('Error al obtener los vuelos');
+        }
+
+        const vuelos = await response.json();
+        console.log(vuelos);
+    } catch (error) {
+        console.error('Error:', error.message);
+    }
+}
+
+obtenerVuelos();
+
+
 // sliders
 sliderDuracion.addEventListener('change', () => {
     spansSlider[0].innerText = sliderDuracion.value;
@@ -46,4 +81,5 @@ btnFiltros.addEventListener('click', () => {
     });
     document.body.appendChild(btnCerrarAside);
 });
+
 
